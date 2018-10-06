@@ -9,7 +9,12 @@ class Greeting {
         if (!name) {
             return this.defaultGreeting;
         }
-        return this.hello + name;
+        return this.hello + this.addPeriod(name);
+    }
+
+    addPeriod(name) {
+        const period = '.';
+        return name + period;
     }
 }
 module.exports = Greeting;

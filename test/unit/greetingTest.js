@@ -25,7 +25,7 @@ describe('Greeting', () => {
     describe('single name', () => {
         it('should return a simple greeting', () => {
             const testGreeting = new Greeting();
-            expect(testGreeting.greet('Bob')).to.eq('Hello, Bob');
+            expect(testGreeting.greet('Bob')).to.eq('Hello, Bob.');
         });
     });
 
@@ -34,6 +34,13 @@ describe('Greeting', () => {
         it('should return a default greeting', () => {
             const testGreeting = new Greeting();
             expect(testGreeting.greet()).to.eq('Hello, my friend');
+        });
+    });
+
+    describe('add punctuation', () => {
+        it('should add a period after a name', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.addPeriod('Bob')).to.eq('Bob.');
         });
     });
 });
