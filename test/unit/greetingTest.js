@@ -42,5 +42,10 @@ describe('Greeting', () => {
             const testGreeting = new Greeting();
             expect(testGreeting.addPeriod('Bob')).to.eq('Bob.');
         });
+
+        it('should add a bang after a name', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.addBang('JERRY')).to.eq('JERRY!');
+        });
     });
 });

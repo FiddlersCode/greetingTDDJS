@@ -16,5 +16,10 @@ class Greeting {
         const period = '.';
         return name + period;
     }
+
+    addBang(name) {
+        const bang = '!';
+        return name + bang;
+    }
 }
 module.exports = Greeting;
