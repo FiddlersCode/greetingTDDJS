@@ -3,11 +3,9 @@ const isUpperCase = require('is-upper-case');
 class Punctuation {
     addPunctuation(name) {
         if (isUpperCase(name)) {
-            const bang = '!';
-            return name + bang;
+            return this.addBang(name);
         }
-        const period = '.';
-        return name + period;
+        return this.addPeriod(name);
     }
 
     addPeriod(name) {
