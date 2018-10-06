@@ -6,9 +6,14 @@ const Greeting = require('../../src/greeting');
 
 describe('Greeting', () => {
     describe('constructor', () => {
-        it('should be an instance of the Greeting class', () => {
+        it('should have a hello property', () => {
             const testGreeting = new Greeting();
             expect(testGreeting.hello).to.eq('Hello, ');
+        });
+
+        it('should have a default greeting', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.defaultGreeting).to.eq('Hello, my friend');
         });
     });
 
