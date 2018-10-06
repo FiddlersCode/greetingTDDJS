@@ -19,10 +19,20 @@ describe('Name', () => {
         });
     });
 
-    describe('default greeting', () => {
-        it('returns greeting', () => {
+    describe('return greeting', () => {
+        it('returns simple greeting', () => {
             const testName = new Name();
             expect(testName.returnGreeting('Bob')).to.eq('Hello, Bob.');
+        });
+
+        it('returns uppercase greeting', () => {
+            const testName = new Name();
+            expect(testName.returnGreeting('JERRY')).to.eq('HELLO JERRY!');
+        });
+
+        it('should return a greeting for an array of 2 names', () => {
+            const testName = new Name();
+            expect(testName.returnGreeting(['Jill', 'Jane'])).to.eq('Hello, Jill and Jane');
         });
     });
 });
