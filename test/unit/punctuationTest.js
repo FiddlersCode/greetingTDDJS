@@ -16,4 +16,19 @@ describe('Punctuation', () => {
             expect(testPunctuation.addPunctuation('JERRY')).to.eq('JERRY!');
         });
     });
+
+    describe('add period', () => {
+        it('addPeriod should add a period', () => {
+            const testPunctuation = new Punctuation();
+            expect(testPunctuation.addPeriod('Bob')).to.eq('Bob.');
+        });
+    });
+
+
+    describe('add bang', () => {
+        it('addBang should add a bang', () => {
+            const testPunctuation = new Punctuation();
+            expect(testPunctuation.addBang('JERRY')).to.eq('JERRY!');
+        });
+    });
 });
