@@ -8,7 +8,7 @@ describe('Greeting', () => {
     describe('constructor', () => {
         it('should be an instance of the Greeting class', () => {
             const testGreeting = new Greeting();
-            expect(testGreeting).to.be.instanceof(Greeting);
+            expect(testGreeting.hello).to.eq('Hello, ');
         });
     });
 

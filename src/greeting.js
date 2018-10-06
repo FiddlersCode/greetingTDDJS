@@ -1,6 +1,10 @@
 class Greeting {
+
+    constructor() {
+        this.hello = 'Hello, ';
+    }
     greet(name) {
-        return `Hello, ${name}`;
+        return this.hello + name;
     }
 }
 module.exports = Greeting;
