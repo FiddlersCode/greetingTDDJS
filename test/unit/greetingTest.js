@@ -42,4 +42,11 @@ describe('Greeting', () => {
             expect(testGreeting.greet()).to.eq('Hello, my friend');
         });
     });
+
+    describe('uppercase name', () => {
+        it('should return an uppercase greeting', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.greet('JERRY')).to.eq('HELLO JERRY!');
+        });
+    });
 });

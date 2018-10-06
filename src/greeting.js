@@ -1,3 +1,4 @@
+const isUpperCase = require('is-upper-case');
 const Punctuation = require('./punctuation');
 
 class Greeting {
@@ -12,7 +13,10 @@ class Greeting {
         if (!name) {
             return this.defaultGreeting;
         }
-        return this.hello + this.punctuation.addPeriod(name);
+        if (isUpperCase(name)) {
+            return this.uppercaseHello + this.punctuation.addPunctuation(name);
+        }
+        return this.hello + this.punctuation.addPunctuation(name);
     }
 }
 module.exports = Greeting;
