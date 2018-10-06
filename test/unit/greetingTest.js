@@ -18,4 +18,12 @@ describe('Greeting', () => {
             expect(testGreeting.greet('Bob')).to.eq('Hello, Bob');
         });
     });
+
+
+    describe('null name', () => {
+        it('should return a default greeting', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.greet()).to.eq('Hello, my friend');
+        });
+    });
 });
