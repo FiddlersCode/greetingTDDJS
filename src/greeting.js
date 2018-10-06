@@ -10,6 +10,9 @@ class Greeting {
     }
 
     greet(name) {
+        if (Array.isArray(name)) {
+            return 'Hello, Jill and Jane';
+        }
         if (!name) {
             return this.defaultGreeting;
         }

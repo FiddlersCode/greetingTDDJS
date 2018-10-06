@@ -49,4 +49,11 @@ describe('Greeting', () => {
             expect(testGreeting.greet('JERRY')).to.eq('HELLO JERRY!');
         });
     });
+
+    describe('array of 2 names', () => {
+        it('should return a greeting for both names', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.greet(['Jill', 'Jane'])).to.eq('Hello, Jill and Jane');
+        });
+    });
 });
