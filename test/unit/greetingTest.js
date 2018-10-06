@@ -15,6 +15,11 @@ describe('Greeting', () => {
             const testGreeting = new Greeting();
             expect(testGreeting.defaultGreeting).to.eq('Hello, my friend');
         });
+
+        it('should have an uppercase hello property', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.uppercaseHello).to.eq('HELLO ');
+        });
     });
 
     describe('single name', () => {

@@ -1,6 +1,7 @@
 class Greeting {
     constructor() {
         this.hello = 'Hello, ';
+        this.uppercaseHello = 'HELLO ';
         this.defaultGreeting = 'Hello, my friend';
     }
 
