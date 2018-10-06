@@ -3,6 +3,7 @@ const chai = require('chai');
 const { expect } = chai;
 
 const Greeting = require('../../src/greeting');
+const Punctuation = require('../../src/punctuation');
 
 describe('Greeting', () => {
     describe('constructor', () => {
@@ -19,6 +20,11 @@ describe('Greeting', () => {
         it('should have an uppercase hello property', () => {
             const testGreeting = new Greeting();
             expect(testGreeting.uppercaseHello).to.eq('HELLO ');
+        });
+
+        it('should have a punctuation', () => {
+            const testGreeting = new Greeting();
+            expect(testGreeting.punctuation).to.be.instanceOf(Punctuation);
         });
     });
 

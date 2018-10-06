@@ -1,8 +1,11 @@
+const Punctuation = require('./punctuation');
+
 class Greeting {
     constructor() {
         this.hello = 'Hello, ';
         this.uppercaseHello = 'HELLO ';
         this.defaultGreeting = 'Hello, my friend';
+        this.punctuation = new Punctuation();
     }
 
     greet(name) {
