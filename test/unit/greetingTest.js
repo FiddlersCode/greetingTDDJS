@@ -42,16 +42,4 @@ describe('Greeting', () => {
             expect(testGreeting.greet()).to.eq('Hello, my friend');
         });
     });
-
-    describe('add punctuation', () => {
-        it('should add a period after a name', () => {
-            const testGreeting = new Greeting();
-            expect(testGreeting.addPeriod('Bob')).to.eq('Bob.');
-        });
-
-        it('should add a bang after a name', () => {
-            const testGreeting = new Greeting();
-            expect(testGreeting.addBang('JERRY')).to.eq('JERRY!');
-        });
-    });
 });
