@@ -1,0 +1,37 @@
+{
+  "name": "greetingtddjs",
+  "version": "1.0.0",
+  "description": "by Paula Muldoon",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive test/unit",
+    "eslint": "node_modules/.bin/eslint src/",
+    "coverage": "node_modules/.bin/nyc --check-coverage --lines=95 --branches=95 --functions=95 --statements=95 npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FiddlersCode/greetingTDDJS.git"
+  },
+  "author": "Paula Muldoon",
+  "license": "ISC",
+  "precommit": "eslint,coverage",
+  "nyc": {
+    "exclude": [
+      "**/test/"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/FiddlersCode/greetingTDDJS/issues"
+  },
+  "homepage": "https://github.com/FiddlersCode/greetingTDDJS#readme",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "pre-commit": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
