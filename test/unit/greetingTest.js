@@ -48,6 +48,12 @@ describe('Greeting', () => {
         });
     });
 
+    describe('array of 3 names', () => {
+        it('should return a greeting for both names', () => {
+            expect(testGreeting.greet(['Amy', 'Brian', 'Charlotte'])).to.eq('Hello, Amy, Brian, and Charlotte.');
+        });
+    });
+
     afterEach(() => {
         testGreeting = null;
     });
