@@ -54,7 +54,7 @@ describe('Greeting', () => {
 
     describe('array of 2 names', () => {
         it('should return a greeting for both names', () => {
-            expect(testGreeting.greet(['Jill', 'Jane'])).to.eq('Hello, Jill and Jane');
+            expect(testGreeting.greet(['Jill', 'Jane'])).to.eq('Hello, Jill and Jane.');
         });
     });
 

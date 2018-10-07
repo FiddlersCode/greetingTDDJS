@@ -12,16 +12,14 @@ class Greeting {
     }
 
     greet(name) {
-        if (Array.isArray(name)) {
-            return 'Hello, Jill and Jane';
-        }
         if (!name) {
             return this.defaultGreeting;
         }
-        if (isUpperCase(name)) {
-            return this.uppercaseHello + this.punctuation.addPunctuation(name);
+        const formattedName = this.name.formatName(name);
+        if (isUpperCase(formattedName)) {
+            return this.uppercaseHello + this.punctuation.addPunctuation(formattedName);
         }
-        return this.hello + this.punctuation.addPunctuation(name);
+        return this.hello + this.punctuation.addPunctuation(formattedName);
     }
 }
 module.exports = Greeting;
