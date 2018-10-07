@@ -32,4 +32,10 @@ describe('Name', () => {
             expect(Name.formatArray(['Amy', 'Brian', 'Charlotte'])).to.eq('Amy, Brian, and Charlotte');
         });
     });
+
+    describe('format mixed case array', () => {
+        it('should format an array of 3 mixed-case names', () => {
+            expect(Name.formatMixedCaseArray(['Amy', 'BRIAN', 'Charlotte'])).to.deep.eq([['Amy', 'Charlotte'], ['BRIAN']]);
+        });
+    });
 });
