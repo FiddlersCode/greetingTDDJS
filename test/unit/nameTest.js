@@ -38,6 +38,10 @@ describe('Name', () => {
             expect(Name.formatSingleCaseArray(['Jill', 'Jane'])).to.eq('Jill and Jane');
         });
 
+        it('should format an array of 3 names', () => {
+            expect(Name.formatSingleCaseArray(['Amy', 'Brian', 'Charlotte'])).to.eq('Amy, Brian, and Charlotte');
+        });
+
         it('should format an array of 3 mixed-case names', () => {
             expect(Name.formatMixedCaseArray(['Amy', 'BRIAN', 'Charlotte'])).to.deep.eq([['Amy', 'Charlotte'], ['BRIAN']]);
         });
