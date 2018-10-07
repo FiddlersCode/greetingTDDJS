@@ -1,21 +1,9 @@
-const isUpperCase = require('is-upper-case');
-const Greeting = require('./greeting');
-const Punctuation = require('./punctuation');
-
 class Name {
-    constructor() {
-        this.greeting = new Greeting();
-        this.punctuation = new Punctuation();
-    }
-
-    returnGreeting(name) {
+    formatName(name) {
         if (Array.isArray(name)) {
-            return 'Hello, Jill and Jane';
+            return name.join(' and ');
         }
-        if (isUpperCase(name)) {
-            return this.greeting.uppercaseHello + this.punctuation.addPunctuation(name);
-        }
-        return this.greeting.hello + this.punctuation.addPunctuation(name);
+        return name;
     }
 }
 module.exports = Name;
