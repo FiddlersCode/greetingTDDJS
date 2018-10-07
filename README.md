@@ -6,11 +6,12 @@ I modified slightly the README of the original, to make the requirements clearer
 
 Especially with this kata, there is an infinite amount of variations on greetings and edge cases.  On the principle of [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), I limited myself to testing the specific examples provided by the authors rather than guessing what other contortions these specs might produce.
 
-### [Diagram](https://www.draw.io/#HFiddlersCode%2FgreetingTDD%2Fmaster%2FgreetingKataPHPDiagram.xml)
 
 ### Instructions
 - Run `npm install`
 - To run tests: `npm run tests`
+
+- Note: there is a pre-commit hook in place which runs the test coverage and linter. You will not be allowed to commit without 95% coverage and 0 linter errors/warnings.
 ---
 ## Processes
 * TDD
