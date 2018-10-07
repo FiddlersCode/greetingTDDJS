@@ -7,14 +7,13 @@ class Greeting {
         this.hello = 'Hello, ';
         this.uppercaseHello = 'HELLO ';
         this.defaultGreeting = 'Hello, my friend';
-        this.name = new Name();
     }
 
     greet(name) {
         if (!name) {
             return this.defaultGreeting;
         }
-        const formattedName = this.name.formatName(name);
+        const formattedName = Name.formatName(name);
         if (isUpperCase(formattedName)) {
             return this.uppercaseHello + Punctuation.addPunctuation(formattedName);
         }

@@ -3,7 +3,6 @@ const chai = require('chai');
 const { expect } = chai;
 
 const Greeting = require('../../src/greeting');
-const Name = require('../../src/name');
 
 describe('Greeting', () => {
     let testGreeting;
@@ -21,10 +20,6 @@ describe('Greeting', () => {
 
         it('should have an uppercase hello property', () => {
             expect(testGreeting.uppercaseHello).to.eq('HELLO ');
-        });
-
-        it('should have a name', () => {
-            expect(testGreeting.name).to.be.instanceOf(Name);
         });
     });
 

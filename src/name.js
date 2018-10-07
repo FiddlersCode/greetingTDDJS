@@ -1,5 +1,5 @@
 class Name {
-    formatName(name) {
+    static formatName(name) {
         if (Array.isArray(name)) {
             return name.join(' and ');
         }
