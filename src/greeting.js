@@ -7,7 +7,6 @@ class Greeting {
         this.hello = 'Hello, ';
         this.uppercaseHello = 'HELLO ';
         this.defaultGreeting = 'Hello, my friend';
-        this.punctuation = new Punctuation();
         this.name = new Name();
     }
 
@@ -17,9 +16,9 @@ class Greeting {
         }
         const formattedName = this.name.formatName(name);
         if (isUpperCase(formattedName)) {
-            return this.uppercaseHello + this.punctuation.addPunctuation(formattedName);
+            return this.uppercaseHello + Punctuation.addPunctuation(formattedName);
         }
-        return this.hello + this.punctuation.addPunctuation(formattedName);
+        return this.hello + Punctuation.addPunctuation(formattedName);
     }
 }
 module.exports = Greeting;
