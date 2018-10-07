@@ -4,6 +4,7 @@ const { expect } = chai;
 
 const Greeting = require('../../src/greeting');
 const Punctuation = require('../../src/punctuation');
+const Name = require('../../src/name');
 
 describe('Greeting', () => {
     let testGreeting;
@@ -25,6 +26,10 @@ describe('Greeting', () => {
 
         it('should have a punctuation', () => {
             expect(testGreeting.punctuation).to.be.instanceOf(Punctuation);
+        });
+
+        it('should have a name', () => {
+            expect(testGreeting.name).to.be.instanceOf(Name);
         });
     });
 

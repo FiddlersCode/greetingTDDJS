@@ -1,5 +1,6 @@
 const isUpperCase = require('is-upper-case');
 const Punctuation = require('./punctuation');
+const Name = require('./name');
 
 class Greeting {
     constructor() {
@@ -7,6 +8,7 @@ class Greeting {
         this.uppercaseHello = 'HELLO ';
         this.defaultGreeting = 'Hello, my friend';
         this.punctuation = new Punctuation();
+        this.name = new Name();
     }
 
     greet(name) {
