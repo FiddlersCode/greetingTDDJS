@@ -21,16 +21,16 @@ class Name {
         return arrayOfNames.join(', ');
     }
 
+    static formatSingleCaseArray(arrayOfNames) {
+        return arrayOfNames.join(' and ');
+    }
+
     static formatMixedCaseArray(arrayOfNames) {
         const lowerCaseNames = [];
         const upperCaseNames = [];
         const sortedNames = [lowerCaseNames, upperCaseNames];
         arrayOfNames.forEach((name) => {
-            if (!isUpperCase(name)) {
-                lowerCaseNames.push(name);
-            } else {
-                upperCaseNames.push(name);
-            }
+            !isUpperCase(name) ? lowerCaseNames.push(name) : upperCaseNames.push(name);
         });
         return sortedNames;
     }
