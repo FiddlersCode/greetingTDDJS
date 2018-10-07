@@ -22,4 +22,14 @@ describe('Name', () => {
             expect(Name.formatName(['Amy', 'Brian', 'Charlotte'])).to.eq('Amy, Brian, and Charlotte');
         });
     });
+
+    describe('format array', () => {
+        it('formats an array with 2 names', () => {
+            expect(Name.formatArray(['Jill', 'Jane'])).to.eq('Jill and Jane');
+        });
+
+        it('should format an array of 3 names', () => {
+            expect(Name.formatArray(['Amy', 'Brian', 'Charlotte'])).to.eq('Amy, Brian, and Charlotte');
+        });
+    });
 });
